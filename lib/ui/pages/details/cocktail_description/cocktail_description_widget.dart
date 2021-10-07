@@ -25,16 +25,14 @@ class CocktailDescriptionWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Observer(builder: (context) {
+              var list = (Provider.of<FavoriteCocktailStore>(context)
+                      .cocktailFavoritesList ??
+                  Provider.of<FavoriteCocktailStore>(context)
+                      .cocktailFavoritesListFuture);
               return CocktailTitle(
                   cocktail: cocktail,
-                  isFavorite: ((Provider.of<FavoriteCocktailStore>(context)
-                                      .cocktailFavoritesList ??
-                                  Provider.of<FavoriteCocktailStore>(context)
-                                      .cocktailFavoritesListFuture)!
-                              .map((e) => cocktailsNames.add(e.name)))
-                          .contains(cocktail.name)
-                      ? true
-                      : false //cocktail.isFavourite!,
+                  isFavorite: list!.any((element) =>
+                      element.name == cocktail.name) //cocktail.isFavourite!,
                   );
             }),
             Padding(

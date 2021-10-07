@@ -1,4 +1,4 @@
-#Wed Oct 06 16:25:50 MSK 2021
+#Thu Oct 07 09:56:11 MSK 2021
 base.0=C\:\\Users\\60058838\\IdeaProjects\\FlutterHomeWork\\6th_HW_NewHope\\otus-cocktails-application\\lesson_21_homework\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
